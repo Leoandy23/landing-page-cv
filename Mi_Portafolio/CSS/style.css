@@ -110,7 +110,7 @@ p {
 .carousel {
   margin: 2rem auto;
   padding: 2rem 0;
-  max-width: 80vw;
+  max-width: 50vw;
   text-align: center;
   overflow-x: hidden;
   background-color: var(--carousel-bg-color);
@@ -363,13 +363,13 @@ p {
 
 .modal-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: -1rem;
+  right: -1rem;
 }
 
 .modal-close svg {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   fill: var(--first-color);
 }
 
@@ -594,11 +594,13 @@ progress::-moz-progress-value {
 }
 
 .portfolio-modal {
-  max-width: 400px;
+  max-width: 80vw;
+  max-height: 80vh;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   background-color: var(--white-color);
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .portfolio-modal h3 {
@@ -649,6 +651,12 @@ progress::-moz-progress-value {
     justify-content: space-between;
   }
 
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
   .portfolio > .container {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -659,6 +667,7 @@ progress::-moz-progress-value {
   }
 
   .portfolio-modal {
+    overflow-y: hidden;
     flex-direction: row;
     max-width: 800px;
   }
@@ -706,6 +715,7 @@ progress::-moz-progress-value {
   .header > .container {
     justify-content: space-between;
   }
+
   .portfolio > .container {
     grid-template-columns: repeat(3, 1fr);
   }
