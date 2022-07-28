@@ -110,7 +110,7 @@ p {
 .carousel {
   margin: 2rem auto;
   padding: 2rem 0;
-  max-width: 800px;
+  max-width: 50vw;
   text-align: center;
   overflow-x: hidden;
   background-color: var(--carousel-bg-color);
@@ -138,6 +138,10 @@ p {
   width: 0.75rem;
   height: 0.75rem;
   cursor: pointer;
+}
+
+.slide {
+  width: 100vw;
 }
 
 #slide-1:checked ~ .slides {
@@ -532,7 +536,7 @@ progress::-moz-progress-value {
   bottom: 0;
   z-index: 999;
   padding: 1rem;
-  width: 100%;
+  width: 100vw;
   height: var(--header-height);
   background-color: var(--second-color);
 }
@@ -699,6 +703,9 @@ progress::-moz-progress-value {
     height: calc(var(--header-height) - 0.5rem);
   }
 
+  .header > .container {
+    justify-content: space-between;
+  }
   .portfolio > .container {
     grid-template-columns: repeat(3, 1fr);
   }
